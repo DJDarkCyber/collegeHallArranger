@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Hall Arranger | Home
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='cssFiles/mystyle.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imgs/Hacker-PNG-File-1802556205.png') }}">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://kit.fontawesome.com/dca8b9d172.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="{{ url_for('static',filename='cssFiles/normalize.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='cssFiles/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='cssFiles/stellarnav.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='cssFiles/owl.carousel.css')}}">
+        <link href="{{ url_for('static',filename='cssFiles/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='cssFiles/font-awesome.min.css')}}" rel="stylesheet">
+
+        <link href="{{ url_for('static',filename='cssFiles/mystyle.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='cssFiles/responsive.css')}}" rel="stylesheet">
+    
+        <script src="{{ url_for('static',filename='jsFiles/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/vendor/jquery-1.12.4.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/vendor/bootstrap.min.js')}}"></script>
+
+    
+        <!--====== PLUGINS JS ======-->
+        <script src="{{ url_for('static',filename='jsFiles/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='jsFiles/jquery.sticky.js')}}"></script>
+    
+        <!--===== ACTIVE JS=====-->
+        <script src="{{ url_for('static',filename='jsFiles/main.js')}}"></script>
+    </head>
+    <body>
+
+        <!-- 
+            Header Area
+        -->
+
+        <header class="headerArea">
+            <div class="headerOptionArea">
+                <div class="headerOptions">
+                     <a href="{{ url_for('indexPage') }}" class="headerOptionLinks">Home</a>
+                     <a href="https://github.com/DJDarkCyber" class="headerOptionLinks" target="_blank">About Me</a>
+                </div>
+            </div>
+        </header>
+
+        <!--
+            End of Header Area
+        -->
+
+        <div class="mainContentMainArea">
+            <div class="mainContentBox">
+                <div class="inputGetArea">
+                    <form action="{{ url_for('hallArranged') }}" method="post" enctype = "multipart/form-data">
+                        <article class="getInputText">
+                            Enter Number of Halls: <br>
+                        </article>
+                        
+                        <input type="number" name="HALLS" class="getInput getInputNumber" required>
+                        <br>
+                        <article class="getInputText">
+                            Upload the text file contains rolls no (seperated by ,): <br>
+                        </article>
+                        
+                        <input type="file" name="ROLLNOS" class="getInput getInputButton" required>
+                        <input type="submit" class="button-20" value="Arrange" style="width: 120px; height: 32px">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
